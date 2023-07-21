@@ -1,9 +1,7 @@
-FROM nginx:1.22.0
+FROM nginx:latest
 
-RUN mkdir -p /static
-
-RUN rm /etc/nginx/conf.d/default.conf
-RUN rm /usr/share/nginx/html/index.html
+RUN rm -rf /etc/nginx/conf.d/default.conf
+RUN rm -rf /usr/share/nginx/html/index.html
 
 COPY ./default.conf /etc/nginx/conf.d/default.conf
 COPY ./index.html  /usr/share/nginx/html/index.html
