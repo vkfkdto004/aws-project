@@ -1,5 +1,6 @@
 FROM nginx:latest
 
+RUN mkdir -p /html
 RUN rm -rf /etc/nginx/conf.d/default.conf
 RUN rm -rf /usr/share/nginx/html/index.html
 
