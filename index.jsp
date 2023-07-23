@@ -137,7 +137,7 @@
 							   </div>
 							   <div class="form-group">
 							   		<label>제목</label>
-							   	<input type="text" name="evaluationTime" class="form-control" maxlength="30">
+							   	<input type="text" name="evaluationTitle" class="form-control" maxlength="30">
 							   </div>
 							   <div class="form-group">
 							   		<label>내용</label>
