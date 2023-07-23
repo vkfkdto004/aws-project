@@ -44,27 +44,24 @@
 			stmt = conn.createStatement();  //쿼리 실행
 			String sql = "SELECT * FROM restaurants";
 			rs = stmt.executeQuery(sql);   //실행 쿼리 저장 
-			//배열 선언 
-			//ArrayList<String> restaurantsList = new ArrayList<>();
-			//ArrayList<ArrayList<String>> restaurantsList = new ArrayList<>();
-			//String[][] restaurantsList = new String[100][3]; // 예시로 최대 100개의 데이터로 가정 (2개의 열로 구성)
 
-			// 쿼리 결과 저장 
-			
+
 			while (rs.next()) {
 				String title = rs.getString("title"); 
 				String psrc = rs.getString("psrc"); 
 				String info = rs.getString("info"); 
+				String wdate = rs.getString("wdate"); 
 				//배열에 추가함 
 				ArrayList<String> data = new ArrayList<>();
 				data.add(title);
 				data.add(psrc);
 				data.add(info);
+				data.add(wdate);
 				restaurantsList.add(data);
 			}
 
 			if (restaurantsList == null || restaurantsList.size() == 0) {
-				out.println("<p>No restaurants found.</p>");
+				//out.println("<p>No restaurants found.</p>");
 			} else {
 				// restaurantsList가 null이 아니라면 배열의 요소를 반복문을 통해 출력합니다.
 				
@@ -72,13 +69,13 @@
 
 			// 연결 상태 확인
 			if (conn != null) {
-				out.println("<h2>Connected to MySQL database successfully!</h2>");
+				//out.println("<h2>Connected to MySQL database successfully!</h2>");
 			} else {
-				out.println("<h2>Failed to connect to MySQL database!</h2>");
+				//out.println("<h2>Failed to connect to MySQL database!</h2>");
 			}
 		} catch (Exception e) {
 			e.printStackTrace();
-			out.println("<h2>Failed to connect to MySQL database!</h2>");
+			//out.println("<h2>Failed to connect to MySQL database!</h2>");
 		} finally {
 			// 자원 해제
 			if (rs != null) rs.close();
@@ -102,10 +99,10 @@
 		<!-- Begin Menu -->
 		<ul class="navbar-nav ml-auto">
 			<li class="nav-item active">
-			<a class="nav-link" href="index.html">Stories <span class="sr-only">(current)</span></a>
+			<!-- <a class="nav-link" href="index.html">Stories <span class="sr-only">(current)</span></a> -->
 			</li>
 			<li class="nav-item">
-			<a class="nav-link" href="post.html">Post</a>
+			<!-- <a class="nav-link" href="post.html">Post</a> -->
 			</li>
 			<!-- <li class="nav-item"> -->
 			<!-- <a class="nav-link" href="author.html">Author</a> -->
@@ -168,9 +165,9 @@
 								</span>
 								<span class="author-meta">
 								<!-- <span class="post-name">Steve</a></span><br/> -->
-								<span class="post-date">22 July 2017</span><span class="dot"></span>
+								<span class="post-date"><%=restaurantsList.get(0).get(3)%></span><span class="dot"></span>
 								</span>
-								<span class="post-read-more"><a href="post.html" title="Read Story"><svg class="svgIcon-use" width="25" height="25" viewbox="0 0 25 25"><path d="M19 6c0-1.1-.9-2-2-2H8c-1.1 0-2 .9-2 2v14.66h.012c.01.103.045.204.12.285a.5.5 0 0 0 .706.03L12.5 16.85l5.662 4.126a.508.508 0 0 0 .708-.03.5.5 0 0 0 .118-.285H19V6zm-6.838 9.97L7 19.636V6c0-.55.45-1 1-1h9c.55 0 1 .45 1 1v13.637l-5.162-3.668a.49.49 0 0 0-.676 0z" fill-rule="evenodd"></path></svg></a></span>
+								<!-- <span class="post-read-more"><a href="post.html" title="Read Story"><svg class="svgIcon-use" width="25" height="25" viewbox="0 0 25 25"><path d="M19 6c0-1.1-.9-2-2-2H8c-1.1 0-2 .9-2 2v14.66h.012c.01.103.045.204.12.285a.5.5 0 0 0 .706.03L12.5 16.85l5.662 4.126a.508.508 0 0 0 .708-.03.5.5 0 0 0 .118-.285H19V6zm-6.838 9.97L7 19.636V6c0-.55.45-1 1-1h9c.55 0 1 .45 1 1v13.637l-5.162-3.668a.49.49 0 0 0-.676 0z" fill-rule="evenodd"></path></svg></a></span> -->
 							</div>
 						</div>
 					</div>
@@ -200,7 +197,7 @@
 								</span>
 								<span class="author-meta">
 								<!-- <span class="post-name">Steve</a></span><br/> -->
-								<span class="post-date">22 July 2017</span><span class="dot"></span>
+								<span class="post-date"><%=restaurantsList.get(1).get(3)%></span><span class="dot"></span>
 								</span>
 								<!-- <span class="post-read-more"><a title="Read Story"><svg class="svgIcon-use" width="25" height="25" viewbox="0 0 25 25"><path d="M19 6c0-1.1-.9-2-2-2H8c-1.1 0-2 .9-2 2v14.66h.012c.01.103.045.204.12.285a.5.5 0 0 0 .706.03L12.5 16.85l5.662 4.126a.508.508 0 0 0 .708-.03.5.5 0 0 0 .118-.285H19V6zm-6.838 9.97L7 19.636V6c0-.55.45-1 1-1h9c.55 0 1 .45 1 1v13.637l-5.162-3.668a.49.49 0 0 0-.676 0z" fill-rule="evenodd"></path></svg></a></span> -->
 							</div>
@@ -232,7 +229,7 @@
 								</span>
 								<span class="author-meta">
 								<!-- <span class="post-name">Steve</a></span><br/> -->
-								<span class="post-date">22 July 2017</span><span class="dot"></span>
+								<span class="post-date"><%=restaurantsList.get(2).get(3)%></span><span class="dot"></span>
 								</span>
 								<!-- <span class="post-read-more"><a href="post.html" title="Read Story"><svg class="svgIcon-use" width="25" height="25" viewbox="0 0 25 25"><path d="M19 6c0-1.1-.9-2-2-2H8c-1.1 0-2 .9-2 2v14.66h.012c.01.103.045.204.12.285a.5.5 0 0 0 .706.03L12.5 16.85l5.662 4.126a.508.508 0 0 0 .708-.03.5.5 0 0 0 .118-.285H19V6zm-6.838 9.97L7 19.636V6c0-.55.45-1 1-1h9c.55 0 1 .45 1 1v13.637l-5.162-3.668a.49.49 0 0 0-.676 0z" fill-rule="evenodd"></path></svg></a></span> -->
 							</div>
@@ -248,7 +245,8 @@
 			<div class="row">
 				<div class="col-md-5 wrapthumbnail">
 					<a>
-						<div class="thumbnail" style="background-image:url(assets/img/demopic/post_4/jinmi_title.jpg);">
+						<% String imgsrc3 = restaurantsList.get(3).get(1); %>
+						<div class="thumbnail" style="background-image:url(<%= imgsrc3 %>);">
 						</div>
 					</a>
 				</div>
@@ -263,7 +261,7 @@
 								</span>
 								<span class="author-meta">
 								<!-- <span class="post-name">Steve</a></span><br/> -->
-								<span class="post-date">22 July 2017</span><span class="dot"></span>
+								<span class="post-date"><%=restaurantsList.get(3).get(3)%></span><span class="dot"></span>
 								</span>
 								<!-- <span class="post-read-more"><a href="post.html" title="Read Story"><svg class="svgIcon-use" width="25" height="25" viewbox="0 0 25 25"><path d="M19 6c0-1.1-.9-2-2-2H8c-1.1 0-2 .9-2 2v14.66h.012c.01.103.045.204.12.285a.5.5 0 0 0 .706.03L12.5 16.85l5.662 4.126a.508.508 0 0 0 .708-.03.5.5 0 0 0 .118-.285H19V6zm-6.838 9.97L7 19.636V6c0-.55.45-1 1-1h9c.55 0 1 .45 1 1v13.637l-5.162-3.668a.49.49 0 0 0-.676 0z" fill-rule="evenodd"></path></svg></a></span> -->
 							</div>
@@ -307,3 +305,4 @@
 <script src="/assets/js/ie10-viewport-bug-workaround.js"></script>
 </body>
 </html>
+
