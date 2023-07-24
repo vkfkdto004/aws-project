@@ -17,7 +17,7 @@ spec:
         app: tomcat
     spec:
       containers:
-      - image: 194453983284.dkr.ecr.ap-northeast-2.amazonaws.com/final:was
+      - image: 194453983284.dkr.ecr.ap-northeast-2.amazonaws.com/last:was
         name: tomcat
         imagePullPolicy: IfNotPresent
         ports:
