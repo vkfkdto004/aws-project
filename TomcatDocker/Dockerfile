@@ -27,7 +27,7 @@ COPY ./index.jsp  $CATALINA_HOME/webapps/ROOT/index.jsp
 COPY ./main.jsp $CATALINA_HOME/webapps/ROOT/main.jsp
 COPY ./assets   $CATALINA_HOME/webapps/ROOT/assets
 COPY ./mysql-connector-java-8.0.23.jar $CATALINA_HOME/lib/mysql-connector-java-8.0.23.jar
-COPY ./context.xml $CATALINA_HOME/webapps/ROOT/META-INF/context.xml
+COPY ./context.xml $CATALINA_HOME/conf/context.xml
 
 # 컨테이너에서 사용할 포트
 EXPOSE 8080
