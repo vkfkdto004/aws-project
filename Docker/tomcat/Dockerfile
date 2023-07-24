@@ -7,7 +7,7 @@ RUN rm -rf /usr/local/tomcat/conf/server.xml
 COPY ./context.xml /usr/local/tomcat/conf/context.xml
 COPY ./server.xml /usr/local/tomcat/conf/server.xml
 COPY ./mysql-connector-j-8.0.23.jar /usr/local/tomcat/lib/mysql-connector-j-8.0.23.jar
-COPY ./project4.war /usr/local/tomcat/webapps/project4.war
+COPY ./ROOT.war /usr/local/tomcat/webapps/ROOT.war
 
 
 COPY ./commons-pool2-2.4.2.jar /usr/local/tomcat/lib/commons-pool2-2.4.2.jar
