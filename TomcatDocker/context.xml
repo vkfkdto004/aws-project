@@ -1,0 +1,20 @@
+
+<Context>
+
+    <!-- Default set of monitored resources. If one of these changes, the    -->
+    <!-- web application will be reloaded.                                   -->
+    <WatchedResource>WEB-INF/web.xml</WatchedResource>
+        <WatchedResource>WEB-INF/tomcat-web.xml</WatchedResource>
+	    <WatchedResource>${catalina.base}/conf/web.xml</WatchedResource>
+	        <Resource name="jdbc/mysql"
+			           auth="Container"
+			           type="javax.sql.DataSource"
+			           username="admin"
+			           password="rECA3333!"
+			           driverClassName="com.mysql.cj.jdbc.Driver"
+				   url="jdbc:mysql://t4-db-mysql.cr11ygywub5g.ap-northeast-2.rds.amazonaws.com:3306/reca3" 
+			           maxActive="15"
+			           maxIdle="3"/>
+			    
+		 <Manager pathname="">
+	</Context>
