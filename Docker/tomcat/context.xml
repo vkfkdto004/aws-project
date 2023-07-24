@@ -11,7 +11,7 @@
             username="admin"
             password="Reca3333!"
             testOnBorrow="true"
-            url="jdbc:mysql://t4_db_mysql.cr11ygywub5g.ap-northeast-2.rds.amazonaws.com:3306/t4_db_mysql"/>
+            url="jdbc:mysql://t4-db-mysql.cr11ygywub5g.ap-northeast-2.rds.amazonaws.com:3306/t4_db_mysql"/>
 	<Valve className="tomcat.request.session.redis.SessionHandlerValve" />
     <Manager className="tomcat.request.session.redis.SessionManager" />
 </Context>
