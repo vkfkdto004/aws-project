@@ -24,9 +24,9 @@
 <link href="/assets/css/mediumish.css" rel="stylesheet">
 </head>
 <body>
-	<% String url = "jdbc:mysql://database-1.crpyfzp1l3p7.eu-west-1.rds.amazonaws.com:3306/reca3";
+	<% String url = "jdbc:mysql://t4-db-mysql.cr11ygywub5g.ap-northeast-2.rds.amazonaws.com:3306/t4_db_mysql";
     	String username = "admin";
-        String password = "12341234";
+        String password = "Reca3333!";
     %>
 	<%
 		Connection conn = null;
