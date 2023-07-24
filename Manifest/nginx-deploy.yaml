@@ -17,7 +17,7 @@ spec:
         app: nginx
     spec:
       containers:
-      - image: 194453983284.dkr.ecr.ap-northeast-2.amazonaws.com/final:web
+      - image: 194453983284.dkr.ecr.ap-northeast-2.amazonaws.com/last:web
         name: nginx
         imagePullPolicy: IfNotPresent
         ports:
