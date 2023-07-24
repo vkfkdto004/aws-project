@@ -149,9 +149,18 @@
 			<div class="row">
 				<div class="col-md-5 wrapthumbnail">
 					<a>
-						<% String imgsrc0 = restaurantsList.get(0).get(1); %>
-						<div class="thumbnail" style="background-image:url(<%= imgsrc0 %>);">
-						</div>
+						<% 
+						if (restaurantsList != null && restaurantsList.size() > 0) {
+							String imgsrc0 = restaurantsList.get(0).get(1);
+						 %>
+								<div class="thumbnail" style="background-image:url(<%= imgsrc0 %>);"></div>
+						<%
+						} else {
+						%>
+							 <p>No restaurants found.</p>
+						<%
+						}
+						%>
 					</a>
 				</div>
 				<div class="col-md-7">
