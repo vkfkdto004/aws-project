@@ -74,7 +74,6 @@ if (isAuthenticated) {
     out.println("<script>alert('아이디와 비밀번호를 다시 확인해 주세요.');</script>");
     out.println("<h2>로그인 실패</h2>");
     out.println("<p>아이디와 비밀번호를 다시 확인해 주세요.</p>");
-    response.sendRedirect("index.html");
 }
 
 
