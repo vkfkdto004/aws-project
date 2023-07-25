@@ -17,7 +17,7 @@ body{
 
 .login-wrapper > h2{
     font-size: 24px;
-    color: #3a24fe;
+    color: #4C50BB;
     margin-bottom: 20px;
 }
 #login-form > input{
@@ -35,7 +35,7 @@ body{
 #login-form > input[type="submit"]{
     color: #fff;
     font-size: 16px;
-    background-color: #243afe;
+    background-color: #4C50BB;
     margin-top: 20px;
 }
 
