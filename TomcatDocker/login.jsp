@@ -6,9 +6,9 @@
 
 <%
 
-String url = "jdbc:mysql://t4-db-mysql.cr11ygywub5g.ap-northeast-2.rds.amazonaws.com:3306/reca3";
+String url = "jdbc:mysql://"jdbc:mysql://database-1.crpyfzp1l3p7.eu-west-1.rds.amazonaws.com:3306/reca3";
 String username = "admin";
-String password = "rECA3333!";
+String password = "12341234";
 
 // 사용자가 입력한 아이디와 비밀번호
 String userNameInput = request.getParameter("userName");
