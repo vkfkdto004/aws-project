@@ -7,9 +7,9 @@
 			           auth="Container"
 			           type="javax.sql.DataSource"
 			           username="admin"
-			           password="12341234"
+			           password="rECA3333!"
 			           driverClassName="com.mysql.cj.jdbc.Driver"
-				   url="jdbc:mysql://database-1.crpyfzp1l3p7.eu-west-1.rds.amazonaws.com:3306/reca3"
+				   url="jdbc:mysql://t4-db-mysql.cr11ygywub5g.ap-northeast-2.rds.amazonaws.com:3306/reca3"
 			           maxActive="15"
 			           maxIdle="3"/>
 			    
