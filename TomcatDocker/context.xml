@@ -12,6 +12,4 @@
 				   url="jdbc:mysql://t4-db-mysql.cr11ygywub5g.ap-northeast-2.rds.amazonaws.com:3306/reca3"
 			           maxActive="15"
 			           maxIdle="3"/>
-			    
-		 <Manager pathname="">
 	</Context>
