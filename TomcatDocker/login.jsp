@@ -6,7 +6,7 @@
 
 <%
 
-String url = "jdbc:mysql://"t4-db-mysql.cr11ygywub5g.ap-northeast-2.rds.amazonaws.com:3306/reca3";
+String url = "jdbc:mysql://t4-db-mysql.cr11ygywub5g.ap-northeast-2.rds.amazonaws.com:3306/reca3";
 String username = "admin";
 String password = "rECA3333!";
 
