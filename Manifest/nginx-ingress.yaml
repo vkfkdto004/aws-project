@@ -1,3 +1,4 @@
+#nginx-ingress.yaml
 ---
 apiVersion: networking.k8s.io/v1
 kind: Ingress
@@ -7,7 +8,7 @@ metadata:
   annotations:
     kubetnetes.io/ingress.class: alb
     alb.ingress.kubernetes.io/scheme: internet-facing
-    alb.ingress.kubernetes.io/subnets: subnet-00348d355eaedc8fd,subnet-095c29473496db71c
+    alb.ingress.kubernetes.io/subnets: subnet-0fccc61c3cbf88023, subnet-08cdab8c98e5ae84a
     alb.ingress.kubernetes.io/load-balancer-name: nginx-load-balancer
     alb.ingress.kubernetes.io/target-type: instance
     ingress.class.kubernetes.io/is-default-class: "true"
