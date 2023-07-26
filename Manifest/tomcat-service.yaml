@@ -1,3 +1,4 @@
+#tomcat-service.yaml
 ---
 apiVersion: v1
 kind: Service
@@ -12,4 +13,5 @@ spec:
       port: 8080
       targetPort: 8080
   type: NodePort
-  clusterIP: 172.20.108.207
+  clusterIP: 172.20.90.200
+  
