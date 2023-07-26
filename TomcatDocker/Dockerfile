@@ -23,11 +23,12 @@ RUN mv webapps webapps.org
 RUN mkdir webapps
 
 # index.jsp 파일 복사
-COPY ./index.jsp  $CATALINA_HOME/webapps/ROOT/index.jsp
+COPY ./login.jsp  $CATALINA_HOME/webapps/ROOT/login.jsp
 COPY ./main.jsp $CATALINA_HOME/webapps/ROOT/main.jsp
 COPY ./assets   $CATALINA_HOME/webapps/ROOT/assets
 COPY ./mysql-connector-java-8.0.23.jar $CATALINA_HOME/lib/mysql-connector-java-8.0.23.jar
 COPY ./context.xml $CATALINA_HOME/conf/context.xml
+COPY ./index.html  $CATALINA_HOME/webapps/ROOT/index.html
 
 # 컨테이너에서 사용할 포트
 EXPOSE 8080
