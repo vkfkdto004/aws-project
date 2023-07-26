@@ -1,0 +1,26 @@
+#tomcat-deploy.yaml
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  labels:
+    app: tomcat
+  name: tomcat
+  namespace: was
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: tomcat
+  template:
+    metadata:
+      labels:
+        app: tomcat
+    spec:
+      containers:
+      - image: 194453983284.dkr.ecr.ap-northeast-1.amazonaws.com/last-tomcat:latest
+        name: tomcat
+        ports:
+          - containerPort: 8080
+        nodeSelector:
+          app: tomcat

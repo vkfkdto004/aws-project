@@ -1,0 +1,12 @@
+---
+apiVersion: eksctl.io/v1alpha5
+kind: ClusterConfig
+metadata:
+  name: T4-eks-cluster
+  region: ap-northeast-1
+fargateProfiles:
+  - name: nginx-fargate-profile
+    selectors:
+      - namespace: web
+        labels:
+          app: nginx-fargate

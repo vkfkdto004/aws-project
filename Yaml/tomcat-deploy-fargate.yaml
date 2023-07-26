@@ -1,0 +1,25 @@
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  labels:
+    app: tomcat
+  name: tomcat
+  namespace: was
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: tomcat-fargate
+  template:
+    metadata:
+      labels:
+        app: tomcat-fargate
+      containers:
+      - image: 194453983284.dkr.ecr.ap-northeast-1.amazonaws.com/last-tomcat:latest
+        name: tomcat
+        imagePullPolicy: IfNotPresent
+        ports:
+          - containerPort: 80
+      nodeSelector:
+        app: tomcat-fargate
