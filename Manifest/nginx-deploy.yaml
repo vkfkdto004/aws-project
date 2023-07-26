@@ -1,3 +1,4 @@
+#nginx-deploy.yaml
 ---
 apiVersion: apps/v1
 kind: Deployment
@@ -17,12 +18,9 @@ spec:
         app: nginx
     spec:
       containers:
-      - image: 194453983284.dkr.ecr.ap-northeast-2.amazonaws.com/last:web
+      - image: 194453983284.dkr.ecr.ap-northeast-1.amazonaws.com/realtn:latest
         name: nginx
-        imagePullPolicy: IfNotPresent
         ports:
           - containerPort: 80
       nodeSelector:
         app: nginx
-      
-     
