@@ -11,5 +11,5 @@ spec:
     - protocol: TCP
       port: 8080
       targetPort: 8080
-  type: ClusterIP
+  type: NodePort
   clusterIP: 172.20.108.207
