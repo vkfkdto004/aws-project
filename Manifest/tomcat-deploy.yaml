@@ -1,3 +1,4 @@
+#tomcat-deploy.yaml
 ---
 apiVersion: apps/v1
 kind: Deployment
@@ -7,7 +8,7 @@ metadata:
   name: tomcat
   namespace: was
 spec:
-  replicas: 1 
+  replicas: 1
   selector:
     matchLabels:
       app: tomcat
@@ -17,10 +18,9 @@ spec:
         app: tomcat
     spec:
       containers:
-      - image: 194453983284.dkr.ecr.ap-northeast-2.amazonaws.com/last:was
+      - image: 194453983284.dkr.ecr.ap-northeast-1.amazonaws.com/realreal:latest
         name: tomcat
-        imagePullPolicy: IfNotPresent
         ports:
           - containerPort: 8080
-      nodeSelector:
-        app: tomcat
+        nodeSelector:
+          app: tomcat
