@@ -3,7 +3,7 @@ apiVersion: autoscaling/v1
 kind: HorizontalPodAutoscaler
 metadata:
   name: tomcat-hpa
-  namespace: default
+  namespace: was
 spec:
   scaleTargetRef:
     apiVersion: apps/v1
