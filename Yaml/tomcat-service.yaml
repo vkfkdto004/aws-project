@@ -1,10 +1,10 @@
-#nginx-service.yaml
+#tomcat-service.yaml
 ---
 apiVersion: v1
 kind: Service
 metadata:
   name: tomcat-service
-  namespace: web
+  namespace: was
   labels:
     app: tomcat
 spec:
